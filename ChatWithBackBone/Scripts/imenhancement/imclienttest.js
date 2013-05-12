@@ -7,7 +7,7 @@ test("[post CreateAccessTokenPassword] for arod", function () {
     var request = { "email": _emailAddress, "password": _password };
     console.log("email: " + request.email + "password: " + request.password);
 
-    var sendReq = $.ajax({
+  $.ajax({
         type: 'POST',
         url: url,
         data: request,
@@ -34,15 +34,8 @@ test("[post CreateAccessTokenPassword] for arod", function () {
     var accessToken = sessionStorage.getItem("AccessToken");
     ok(true, "access token retrieved:" + accessToken);
     var accessTokenLength = accessToken.length;
-//    var accessTokenHasVal = undefined;
-//    if (accessTokenLength > 0) {
-//        accessTokenHasVal = "ok";
-//    } else {
-//        accessTokenHasVal = "failed";
-//    }
-    strictEqual(_statusCode, "200", "Expect HTTP Status 200");
+    strictEqual(_statusCode, 200, "Expect HTTP Status 200");
     ok((accessTokenLength > 0), "Expect Access Token has length: " + accessTokenLength);
-//    strictEqual(accessTokenHasVal, "ok", "Expect Access Token has value");
 });
 
 
