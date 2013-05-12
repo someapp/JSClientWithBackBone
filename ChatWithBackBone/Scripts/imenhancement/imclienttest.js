@@ -5,7 +5,7 @@ module("OAuth Authentication", "stage3 v2 rest api");
 test("[post CreateAccessTokenPassword] for arod", function () {
     var url = _apiUrl + "/brandId/" + _brandId + "/oauth2/accesstoken/application/" + _appId + "?client_secret=" + _clientSecret;
     var request = { "email": _emailAddress, "password": _password };
-
+    console.log("email: " + request.email + "password: " + request.password);
 
     var sendReq = $.ajax({
         type: 'POST',
@@ -23,6 +23,7 @@ test("[post CreateAccessTokenPassword] for arod", function () {
             start();
         }
     });
+
     ok(true, "url: " + url);
     ok(true, "brandId: " + _brandId);
     ok(true, "appId: " + _appId);
@@ -32,15 +33,19 @@ test("[post CreateAccessTokenPassword] for arod", function () {
     ok(true, "password: " + request.password);
     var accessToken = sessionStorage.getItem("AccessToken");
     ok(true, "access token retrieved:" + accessToken);
-    var accessTokenHasVal = (accessToken = null) || (accessToken = undefined);
-    if (accessTokenHasVal = true) {
-        accessTokenHasVal = "failed";
-    } else {
-        accessTokenHasVal = "ok";
-    }
+    var accessTokenLength = accessToken.length;
+//    var accessTokenHasVal = undefined;
+//    if (accessTokenLength > 0) {
+//        accessTokenHasVal = "ok";
+//    } else {
+//        accessTokenHasVal = "failed";
+//    }
     strictEqual(_statusCode, "200", "Expect HTTP Status 200");
-    strictEqual(accessTokenHasVal, "ok", "Expect Access Token has value");
+    ok((accessTokenLength > 0), "Expect Access Token has length: " + accessTokenLength);
+//    strictEqual(accessTokenHasVal, "ok", "Expect Access Token has value");
 });
+
+
 test("[post CreateAccessTokenPassword] for wlee", function () {
     var url = _apiUrl + "/brandId/" + _brandId + "/oauth2/accesstoken/application/" + _appId + "?client_secret=" + _clientSecret;
     var request = { "email": _targetMemberEmailAddress, "password": _targetMemberPassword };
