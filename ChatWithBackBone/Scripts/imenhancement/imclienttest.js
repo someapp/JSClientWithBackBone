@@ -6,6 +6,7 @@ test("[post CreateAccessTokenPassword] for arod", function () {
     var url = _apiUrl + "/brandId/" + _brandId + "/oauth2/accesstoken/application/" + _appId + "?client_secret=" + _clientSecret;
     var request = { "email": _emailAddress, "password": _password };
 
+
     var sendReq = $.ajax({
         type: 'POST',
         url: url,
@@ -14,6 +15,7 @@ test("[post CreateAccessTokenPassword] for arod", function () {
             var response = data.data;
             sessionStorage.setItem("AccessToken", response.AccessToken);
         },
+
         dataType: "json",
         async: false,
         complete: function (e, xhr, settings) {
@@ -28,13 +30,16 @@ test("[post CreateAccessTokenPassword] for arod", function () {
     ok(true, "password: " + request.password);
     ok(true, "email: " + request.email);
     ok(true, "password: " + request.password);
-    ok(true, "access token retrieved:" + sessionStorage.getItem("AccessToken"));
-    ok(true, "rest resquest sent: " + sendReq.toString());
-    ok(true, "rest response raw received" + sendReq.complete());
+    var accessToken = sessionStorage.getItem("AccessToken");
+    ok(true, "access token retrieved:" + accessToken);
+    var accessTokenHasVal = (accessToken = null) || (accessToken = undefined);
+    if (accessTokenHasVal = true) {
+        accessTokenHasVal = "failed";
+    } else {
+        accessTokenHasVal = "ok";
+    }
     strictEqual(_statusCode, "200", "Expect HTTP Status 200");
-    notStrictEqual(undefined, sessionStorage.getItem("AccessToken"), "Expect some access token be returned");
-    notStrictEqual(null, sessionStorage.getItem("AccessToken"), "Expect some access token be returned");
-
+    strictEqual(accessTokenHasVal, "ok", "Expect Access Token has value");
 });
 test("[post CreateAccessTokenPassword] for wlee", function () {
     var url = _apiUrl + "/brandId/" + _brandId + "/oauth2/accesstoken/application/" + _appId + "?client_secret=" + _clientSecret;

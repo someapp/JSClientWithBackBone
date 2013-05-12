@@ -6,10 +6,10 @@ Javascript unit test to call the imenhacement im client
 * ***** END DESCRIPTION BLOCK ***** */
 "use strict";
 
-(function( window ) {
+(function(window) {
     var _statusCode = undefined;
-        
-}
+
+});
 
 module("InternetMesseging", "stage3 v2 rest api");
 test("[post AddInvite] wlee invites arod");

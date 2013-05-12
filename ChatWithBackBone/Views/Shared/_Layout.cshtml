@@ -9,6 +9,7 @@
         @Styles.Render("~/Content/qunit")
         @Scripts.Render("~/bundles/modernizr")
         <script>
+            
             var _apiUrl = "http://api.stgv3.spark.net/v2";
             var _brandId = 1003;
             var _appId = 1054;
@@ -18,14 +19,14 @@
             var _password = "1111";
             var _targetMemberId = "27029711";
             var _targetMemberEmailAddress = "wlee@spark.net";
-            var _targetMemberPassword = "1234"
+            var _targetMemberPassword = "1234";
         </script>
     </head>
     <body>
         <div id="qunit"></div>
         <div id="qunit-fixture"></div>
         <script src="/Scripts/qunit-1.11.0.js"></script>
-        <script src="/Scripts/imclienttest.js"></script>        
+        <script src="/Scripts/imenhancement/imclienttest.js"></script>        
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
