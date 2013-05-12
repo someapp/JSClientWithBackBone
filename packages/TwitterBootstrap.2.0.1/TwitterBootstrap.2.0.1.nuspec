@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>TwitterBootstrap</id>
+    <version>2.0.1</version>
+    <authors>Twitter</authors>
+    <owners>Twitter</owners>
+    <licenseUrl>https://github.com/twitter/bootstrap/raw/master/LICENSE</licenseUrl>
+    <projectUrl>http://twitter.github.com/bootstrap</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation and more.</description>
+    <copyright>Copyright 2011</copyright>
+    <tags>less asp.net web</tags>
+    <dependencies>
+      <dependency id="dotless" version="1.2.2.0" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>
