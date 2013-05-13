@@ -274,6 +274,7 @@
     <Content Include="Scripts\imclient\spark\APIClient.js" />
     <Content Include="Scripts\imclient\spark\im-mobile.js" />
     <Content Include="Scripts\imclient\spark\IM.js" />
+    <Content Include="Scripts\imclient\spark\jdm-im.js" />
     <Content Include="Scripts\imclient\spark\lib\fIXHR\checkplayer.js" />
     <Content Include="Scripts\imclient\spark\lib\fIXHR\flensed.js" />
     <Content Include="Scripts\imclient\spark\lib\fIXHR\flXHR.js" />
@@ -291,6 +292,7 @@
     <Content Include="Scripts\imclient\spark\lib\strophe.js" />
     <Content Include="Scripts\imclient\spark\lib\strophe.min.js" />
     <Content Include="Scripts\imclient\spark\lib\s_code.js" />
+    <Content Include="Scripts\imclient\spark\spark.api.client.js" />
     <Content Include="Scripts\imclient\spark\spark.API.restClient.js" />
     <Content Include="Scripts\imclient\spark\spark.config.js" />
     <Content Include="Scripts\imclient\spark\spark.localization.en-GB.js" />
