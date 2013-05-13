@@ -2,30 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - IMClient Javascript Test</title>
+        <title>IMClient Javascript Test</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
+        <script src="~/Scripts/qunit-1.11.0.js"></script>
+
+        <script src="~/Scripts/imenhancement/imenhancement.js"></script>
+        <script src="~/Scripts/imenhancement/imclienttest.js"></script>
+     <!-- Your application -->
+@*     <script src="app.js"></script>
+     <!-- Your tests -->
+     <script src="tests.js"></script>*@
+        
+
+        @*        @Scripts.Url("/Scripts/qunit-1.11.0.js");
+        @Scripts.Url("/Scripts/imenhancement/imclienttest.js");
+
+
         @Styles.Render("~/Content/Stylesheets/bootstrap")
-        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/modernizr")*@
         <script>
-            
-            var _apiUrl = "http://api.stgv3.spark.net/v2";
-            var _brandId = 1003;
-            var _appId = 1054;
-            var _clientSecret = "nZGVVfj8dfaBPKsx_dmcRXQml8o5N-iivf5lBkrAmLQ1";
-            var _memberId = "114402580";
-            var _emailAddress = "arodriguez@spark.net";
-            var _password = "1111";
-            var _targetMemberId = "27029711";
-            var _targetMemberEmailAddress = "wlee@spark.net";
-            var _targetMemberPassword = "1234";
+
         </script>
     </head>
     <body>
-        <div id="qunit"></div>
-        <div id="qunit-fixture"></div>
-        <script src="/Scripts/qunit-1.11.0.js"></script>
-        <script src="/Scripts/imenhancement/imclienttest.js"></script>        
+        <h1 id="qunit-header">IMClient Test Suite</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests">test markup, hidden.</ol>
+        
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @Styles.Render("~/Content/qunit")
